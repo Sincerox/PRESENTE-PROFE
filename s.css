@@ -13,3 +13,37 @@
     max-height: 500px;
     max-width: 200px;
 }
+
+.noti .card {
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    background-color: #f4f4f4;
+    }
+
+.noti .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.noti .card-title {
+    color: #464646; /* Color del título de la noticia */
+}
+
+.noti .card-text {
+    color: #6c757d; /* Color del texto de la noticia */
+}
+.imagen100{
+    background-color: #f4f4f4;
+}
+@media (min-width: 769px) {
+    /* Estilos específicos para dispositivos de escritorio */
+    .imagen100 img {
+        width: 100%;
+        max-width: 500px; /* Ajusta según tus preferencias */
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .imagen100 img:hover {
+        transform: scale(1.1);
+    }
+}
