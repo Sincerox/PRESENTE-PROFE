@@ -4,3 +4,12 @@
     width: 100%;
     height: auto;
 }
+
+.a{
+    max-width: 200px;
+}
+
+.b{
+    max-height: 500px;
+    max-width: 200px;
+}

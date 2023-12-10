@@ -9,7 +9,46 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Estilos CSS personalizados -->
-     <link rel="stylesheet" href="s.css">
+    <link rel="stylesheet" href="s.css">
+
+    <style>
+        @media (max-width: 768px) {
+            /* Estilos específicos para dispositivos móviles */
+            .descargar-btn {
+                display: block;
+            }
+
+            .qr-code {
+                display: none;
+            }
+            .imagenbig{
+                display: none;
+            }
+            .imagensmall{
+                display: block;
+            }
+        }
+
+        @media (min-width: 769px) {
+            /* Estilos específicos para dispositivos de escritorio */
+            .descargar-btn {
+                display: none;
+            }
+            .imagen-descargar
+            {
+                display: none;
+            }
+            .qr-code {
+                display: block;
+            }
+            .imagenbig{
+                display: block;
+            }
+            .imagensmall{
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -23,16 +62,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Inicio</a>
+                    <a class="nav-link" href="#inicio">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Cursos</a>
+                    <a class="nav-link" href="#noticias">Noticias</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Noticias</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
+                    <a class="nav-link" href="#contacto">Contacto</a>
                 </li>
             </ul>
         </div>
@@ -40,49 +76,57 @@
 </nav>
 
 <!-- Contenido de la página -->
-<div class="container mt-5">
-    <h1>Bienvenido a Presente Profe!</h1>
-    <p>Explora nuestros cursos y mantente actualizado con las últimas noticias en nuestra sede.</p>
+<div class="container mt-5" id="inicio">
+    <h1>Bienvenido al Portal Educativo DUOC UC</h1>
+    <p>Descarga nuestra app y mantente actualizado con las últimas noticias de nuestra Sede</p>
 
-    <!-- Imagen arriba del botón de descarga -->
+    <!-- Imagen arriba del botón de descarga o QR -->
     <div class="text-center">
-        <img src="icon.jpg" alt="Descripción de la imagen" class="img-thumbnail custom-img mb-4">
-        <br>
-        <a href="app-debug.apk" download class="btn btn-primary">Descargar Aplicación</a>
-    </div>
+        <img src="icon.jpg" alt="Descripción de la imagen" class="imagen-descargar img-thumbnail custom-img mb-4 a">
 
-    <!-- Sección de Cursos -->
-    <div class="row mt-4">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">APP MOVIL </h5>
-                    <p class="card-text">Descripción del Curso de Aplicaciones Moviles</p>
-                    <a href="#" class="btn btn-primary">Más Información</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">CALIDAD DE SOFTWARE</h5>
-                    <p class="card-text">Descripción del Curso de Calidad de Software</p>
-                    <a href="#" class="btn btn-primary">Más Información</a>
-                </div>
-            </div>
-        </div>
+        <!-- Botón de descarga -->
+        <a href="app-debug.apk" download class="btn btn-primary descargar-btn">Descargar Aplicación</a>
+
+        <!-- Código QR -->
+        <img src="qr.png" alt="Código QR" class="qr-code  custom-img mb-4 mx-auto " style="max-width: 300px;">
     </div>
 
     <!-- Sección de Noticias -->
-    <div class="mt-4">
+    <div class="mt-4" id="noticias">
         <h2>Últimas Noticias</h2>
-        <ul>
-            <li>Noticia 1</li>
-            <li>Noticia 2</li>
-            <li>Noticia 3</li>
-        </ul>
+        <div class="card" >
+            <img src="teatro.jpg" class="imagensmall card-img-top img-fluid" alt="Evento de Teatro">
+            <img src="teatro.jpg" class="imagenbig card-img-top img-fluid a" alt="Evento de Teatro">
+            <div class="card-body">
+                <h5 class="card-title">Evento de Teatro en la Sede</h5>
+                <p class="card-text">Este mes, disfruta de una emocionante presentación teatral en nuestra sede. ¡No te lo pierdas!</p>
+            </div>
+        </div>
+<br>
+        <div class="card">
+               <img src="pymes.jpg" class="imagensmall card-img-top img-fluid" alt="Encuentro de PYMEs">
+               <img src="pymes.jpg" class="imagenbig card-img-top img-fluid a" alt="Encuentro de PYMEs">
+            <div class="card-body">
+                <h5 class="card-title">Encuentro de PYMEs en la Sede</h5>
+                <p class="card-text">Un espacio dedicado para que las pequeñas y medianas empresas compartan experiencias y oportunidades. ¡Acompáñanos!</p>
+            </div>
+        </div>
+<br>
+        <div class="card">
+            <img src="entretenimiento.jpg" class="imagensmall card-img-top img-fluid" alt="Noche de Entretenimiento">
+            <img src="entretenimiento.jpg" class="imagenbig img-fluid a" alt="Noche de Entretenimiento" >
+            <div class="card-body">
+                <h5 class="card-title">Noche de Entretenimiento</h5>
+                <p class="card-text">Prepárate para una noche llena de diversión y entretenimiento. Habrá música, baile y mucha alegría.</p>
+            </div>
+        </div>
     </div>
 </div>
+<br>
+<!-- Pie de página -->
+<footer class="bg-dark text-light text-center py-3" id="contacto">
+    <p>Somos un app para gestionar el sistema de asistencia mediante QR y brindar Información sobre la sede PAO.</p>
+</footer>
 
 <!-- Incluye Bootstrap JS y Popper.js para los componentes interactivos -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
